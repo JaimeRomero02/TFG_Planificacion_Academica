@@ -1,0 +1,42 @@
+max_credits = 12;
+n_courses = 3;
+n_students = 2;
+
+course_names = [
+  "MINERIA DE DATOS",
+  "MULTIMEDIA",
+  "SISTEMAS INTELIGENTES"
+];
+
+course_codes = [
+  "MD",
+  "MM",
+  "SI"
+];
+
+capacity = [1, 1, 1];
+credits = [6, 6, 6];
+
+students = [
+  "alumnoA@upm.es",
+  "alumnoB@upm.es"
+];
+
+pref = array2d(1..n_students, 1..n_courses,
+[
+  % MD, MM, SI
+     3,  0,  0,   % Alumno A solo pide MD
+     0,  3,  0    % Alumno B solo pide MM
+]);
+
+avg_grade_100 = [
+  700,
+  700
+];
+
+previous_rejections = array2d(1..n_students, 1..n_courses,
+[
+  % MD, MM, SI
+     0, 0, 0,
+     0, 0, 0
+]);

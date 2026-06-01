@@ -1,0 +1,61 @@
+NEstudiantes = 4;
+NProfesores = 3;
+NFranjas = 4;
+NAsignaturas = 3;
+NSolicitudes = 6;
+
+% disponibilidad_est[e,t]
+disponibilidad_est = array2d(1..4, 1..4, [
+  true,  true,  false, true,
+  true,  false, true,  true,
+  false, true,  true,  true,
+  true,  true,  true,  false
+]);
+
+% disponibilidad_prof[p,t]
+disponibilidad_prof = array2d(1..3, 1..4, [
+  true,  true,  false, true,
+  false, true,  true,  true,
+  true,  false, true,  true
+]);
+
+% profesor_asignatura[p,a]
+% Profesor 1: asignaturas 1 y 2
+% Profesor 2: asignaturas 2 y 3
+% Profesor 3: asignaturas 1 y 3
+profesor_asignatura = array2d(1..3, 1..3, [
+  true,  true,  false,
+  false, true,  true,
+  true,  false, true
+]);
+
+% estudiante_solicitud[s]
+% solicitud 1 -> estudiante 1
+% solicitud 2 -> estudiante 1
+% solicitud 3 -> estudiante 2
+% solicitud 4 -> estudiante 3
+% solicitud 5 -> estudiante 4
+% solicitud 6 -> estudiante 4
+estudiante_solicitud = [1, 1, 2, 3, 4, 4];
+
+% asignatura_solicitud[s]
+% s1 -> asignatura 1
+% s2 -> asignatura 3
+% s3 -> asignatura 2
+% s4 -> asignatura 3
+% s5 -> asignatura 1
+% s6 -> asignatura 2
+asignatura_solicitud = [1, 3, 2, 3, 1, 2];
+
+% preferencia[s,t]
+preferencia = array2d(1..6, 1..4, [
+  2, 1, 0, 1,
+  1, 2, 0, 1,
+  2, 0, 1, 1,
+  0, 2, 1, 1,
+  1, 2, 1, 0,
+  2, 1, 1, 0
+]);
+
+% máximo de tutorías por profesor
+max_tutorias_prof = [3, 3, 3];

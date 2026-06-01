@@ -1,0 +1,40 @@
+max_credits = 6;
+n_courses = 2;
+n_students = 2;
+
+course_names = [
+  "TRADUCTORES DE LENGUAJES",
+  "MULTIMEDIA"
+];
+
+course_codes = [
+  "TL",
+  "MM"
+];
+
+capacity = [1, 1];
+credits = [6, 6];
+
+students = [
+  "alumnoA@upm.es",
+  "alumnoB@upm.es"
+];
+
+pref = array2d(1..n_students, 1..n_courses,
+[
+  % TL, MM
+     3,  0,   % Alumno A quiere TL y tiene rechazos
+     3,  0    % Alumno B quiere TL y tiene más nota
+]);
+
+avg_grade_100 = [
+  900,   % Alumno A = 6.50
+  950    % Alumno B = 9.50
+];
+
+previous_rejections = array2d(1..n_students, 1..n_courses,
+[
+  % TL, MM
+     3, 0,    % Alumno A tiene muchos rechazos previos
+     0, 0
+]);

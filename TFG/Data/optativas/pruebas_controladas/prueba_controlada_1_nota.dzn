@@ -1,0 +1,40 @@
+max_credits = 6;
+n_courses = 2;
+n_students = 2;
+
+course_names = [
+  "MINERIA DE DATOS",
+  "MULTIMEDIA"
+];
+
+course_codes = [
+  "MD",
+  "MM"
+];
+
+capacity = [1, 1];
+credits = [6, 6];
+
+students = [
+  "alumnoA@upm.es",
+  "alumnoB@upm.es"
+];
+
+pref = array2d(1..n_students, 1..n_courses,
+[
+  % MD, MM
+     3,  0,   % Alumno A
+     3,  0    % Alumno B
+]);
+
+avg_grade_100 = [
+  600,   % Alumno A = 6.00
+  900    % Alumno B = 9.00
+];
+
+previous_rejections = array2d(1..n_students, 1..n_courses,
+[
+  % MD, MM
+     0, 0,
+     0, 0
+]);

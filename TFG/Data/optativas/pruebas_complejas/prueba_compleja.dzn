@@ -1,0 +1,42 @@
+max_credits = 12;
+n_courses = 6;
+n_students = 10;
+
+course_names = ["INTELIGENCIA ARTIFICIAL AVANZADA", "MINERIA DE DATOS", "ARQUITECTURA DEL DATA WAREHOUSE", "PROYECTO SOFTWARE", "SISTEMAS INTELIGENTES", "GRAFICOS 3D"];
+
+course_codes = ["C001", "C002", "C003", "C004", "C005", "C006"];
+
+capacity = [6, 3, 3, 4, 4, 3];
+
+credits = [3, 3, 3, 3, 6, 6];
+
+students = ["alumno1@alumnos.upm.es", "alumno2@alumnos.upm.es", "alumno3@alumnos.upm.es", "alumno4@alumnos.upm.es", "alumno5@alumnos.upm.es", "alumno6@alumnos.upm.es", "alumno7@alumnos.upm.es", "alumno8@alumnos.upm.es", "alumno9@alumnos.upm.es", "alumno10@alumnos.upm.es"];
+
+pref = [| 1, 3, 0, 0, 3, 0
+ | 1, 3, 0, 0, 3, 0
+ | 1, 3, 0, 0, 3, 0
+ | 0, 0, 3, 3, 0, 3
+ | 0, 0, 3, 3, 0, 3
+ | 3, 3, 3, 3, 0, 0
+ | 3, 0, 0, 0, 3, 0
+ | 0, 3, 0, 0, 0, 3
+ | 2, 2, 2, 2, 2, 2
+ | 3, 0, 3, 3, 0, 0
+|];
+
+avg_grade_100 = [
+  700, 680, 850, 720, 760, 690, 730, 710, 800, 740
+];
+
+previous_rejections = array2d(1..10, 1..6, [
+  0,8,0,0,7,0,
+  0,4,0,0,4,0,
+  0,0,0,0,0,0,
+  0,0,2,1,0,3,
+  0,0,5,0,0,6,
+  1,1,1,1,0,0,
+  2,0,0,0,7,0,
+  0,6,0,0,0,6,
+  1,1,1,1,1,1,
+  3,0,3,3,0,0
+]);
